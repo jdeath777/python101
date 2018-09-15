@@ -1,0 +1,19 @@
+#below is the list of a series of commands
+
+1.git clone url 	#is used to clone the git hub repository to local machine
+1. mkdir		#is used to create a directory
+2. cd			#is used to change directory
+3. cd ..		#is used to go back the path twice
+4. vim filename 	#is used to create a new file
+5. ls			#gives a list of all the files in the directory
+6. ls -latr		#gives the path of files
+7. git status		#gives the status of the created file
+8. git add filename 	#adds the file to the repository
+9. git commit -m "comment"	#commit the file and add the data comment
+10. git push		#pushes the file to the git hub repository online
+11. i			#insert text in git
+12. :w			#write
+13. :q			#quit
+14. :wq!		#write and quit after overwriting
+15. mv oldfile newfile	#change the file name 
+
