@@ -15,5 +15,6 @@
 12. :w			#write
 13. :q			#quit
 14. :wq!		#write and quit after overwriting
-15. mv oldfile newfile	#change the file name 
+15. mv oldfile newfile	#change the file name
+16. git log		#shows the commit values with specific data
 
