@@ -7,3 +7,5 @@ print("I could have code like this.") # and the comment after this is ignored
 # print("This won't run.")
 
 print("This will run.")
+
+#This helps to understand the code better
