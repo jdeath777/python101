@@ -17,4 +17,4 @@
 14. :wq!		#write and quit after overwriting
 15. mv oldfile newfile	#change the file name
 16. git log		#shows the commit values with specific data
-
+17. git rm -r/-f filename	#removes the file from the directory
