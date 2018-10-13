@@ -1,18 +1,18 @@
-# i		insert
-# q		quit
-# w		write
-# wq!		write and quit with overwrite
+# i	insert
+# q	quit
+# w	write
+# wq!	write and quit with overwrite
 
 movements in comand mode
 
-# left		h
-# write		l
-# up		k
-# down		j
-# end		e
-# begin		b
+# left	h
+# write	l
+# up	k
+# down	j
+# end	e
+# begin	b
 # delete	x
-# undo		u
-# redo		ctrl r
+# undo	u
+# redo	:q	ctrl r
 
 help gives a list of commands
