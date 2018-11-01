@@ -239,60 +239,71 @@ articles={1:{
 "publishedAt": "2018-07-25T04:00:00Z"
 }}
 
-lis_source=[]
-lis_author=[]
-lis_title=[]
-lis_description=[]
-lis_url=[]
-lis_urlToImage=[]
-lis_publishedAt=[]
+
+
+
+
+#Assigning the list of data names to empty
+
+s_source=[]
+a_author=[]
+t_title=[]
+d_description=[]
+u_url=[]
+i_urlToImage=[]
+p_publishedAt=[]
+
+#using for-loop to get the list of key-value pair
 for k,a in articles.items():
+#using for-loop to get the key-value pair inside the value of previous value    
     for k,v in a.items():
+#based on the key name we add the list to the above empty list
         if k == 'source':
-            lis_source.append(v)
+            s_source.append(v)
         if k == 'author':
-            lis_author.append(v)
+            a_author.append(v)
         if k == 'title':
-            lis_title.append(v)
+            t_title.append(v)
         if k == 'description':
-            lis_description.append(v)
+            d_description.append(v)
         if k == 'url':
-            lis_url.append(v)
+            u_url.append(v)
         if k == 'urlToImage':
-            lis_urlToImage.append(v)
+            i_urlToImage.append(v)
         if k == 'publishedAt':
-            lis_publishedAt.append(v)
+            p_publishedAt.append(v)
 
 
 
+#print the list of the keys 
 print('The list of source is: \n')
 for i in range(len(articles)):
-    print(lis_source[i])
+    print(s_source[i])
 
 print('The list of authors is: \n')
 for i in range(len(articles)):
-    print('The authors are:',lis_author[i])
+    print('The authors are:',a_author[i])
 
 
 print('The list of Titles are: \n')
 for i in range(len(articles)):
-    print(lis_title[i])
+    print(t_title[i])
 
 print('The list of Description are: \n')
 for i in range(len(articles)):
-    print(lis_description[i])
+    print(d_description[i])
 
 print('The list of URL are: \n')
 for i in range(len(articles)):
-    print(lis_url[i])
+    print(u_url[i])
 
 print('The list of image url are: \n')
 for i in range(len(articles)):
-    print(lis_urlToImage[i])
+    print(i_urlToImage[i])
 
 print('The list of Published place: \n')
 for i in range(len(articles)):
-    print(list_publishedat[i])
+    print(p_publishedAt[i])
 
 
       
