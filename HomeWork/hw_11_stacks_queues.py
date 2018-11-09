@@ -1,45 +1,41 @@
-#Stacks Part starts from here
+import collections
+import argparse
+import sys
 
-print("The name of stack is l1")
+class Stack:
+    list1=[]
+    def __init__(self,s_list):
+        self.list1 = s_list
 
-l1 = []
+    def stack_op(self):
+        for i in range(len(self.list1)):
+            print("The elements in the stack are: ",self.list1[i])
 
-#using a function to do the list of operations
+    def stack_len(self):
+        print("The length of the stack is: ",len(self.list1))
 
-def stack(l1):
-    for i in range(0,10):
-        l1.append(i)
-        print("size of stack is :", len(l1))
-        print(l1)
+    def peek(self):
+        print("The element at the top is: ",self.list1[len(self.list1)-1])
 
-    print('\n')
-    print('\n')
-    print("LIFO starts here")
-    print('\n')
-    for i in range(0,10):
-        l1.pop()
-        print("size of stack is:",len(l1))
-        print(l1)
-
-#Queues part starts from here        
-    print('\n')
-    print('\n')
-    print('The queues start from here')
-    print('\n')
+    def pop(self):
+        for i in range(len(self.list1)):
+            print("The remaining element are: ")
+            print("The popped element is: ",self.list1.pop())
+            print("the remaining elements are: ", self.list1[i])
 
 
-    for i in range(0,10):
-        l1.append(i)
-        print('The size of the queue is', len(l1))
-        print(l1)
-    print('\n')
-    print('\n')
-    print('The LIFO method starts here: ')
-    print('\n')
-    for i in range(-10,0):
-        l1.pop()
-        print('The length of the queue is: ',len(l1))
-        print(l1)
 
+parser = argparse.ArgumentParser()
+if sys.argv[1]=="--Stacks":
+    parser.add_argument('--Stacks',type=str)
+    args = parser.parse_args()
+    li_list1 = args.Stacks.split(',')
+    stacklist=[]
+    for i in li_list1:
+        stacklist.append(i)
 
-print(stack(l1))
+s = Stack(stacklist)
+s.stack_op()
+s.peek()
+s.pop()
+s.stack_len()
