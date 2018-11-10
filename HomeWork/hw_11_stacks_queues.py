@@ -1,6 +1,7 @@
 import collections
 import argparse
 import sys
+from collections import deque
 
 class Stack:
     list1=[]
@@ -20,9 +21,27 @@ class Stack:
     def pop(self):
         for i in range(len(self.list1)):
             print("The remaining element are: ")
-            print("The popped element is: ",self.list1.pop())
             print("the remaining elements are: ", self.list1[i])
 
+
+
+class Queue:
+    list1=[]
+
+    
+    def __init__(self,s_list):
+        self.list1 = s_list
+
+    def enque(self):
+        for i in range(len(self.list1)):
+            print("The elements in queue are: ", self.list1[i])
+
+    def queue_len(self):
+        print("The length of the queue are: ",len(self.list1))
+
+    def deque(self):
+        for i in range(len(self.list1)):
+            print("The poped element is :",self.list1.popleft())
 
 
 parser = argparse.ArgumentParser()
@@ -33,9 +52,20 @@ if sys.argv[1]=="--Stacks":
     stacklist=[]
     for i in li_list1:
         stacklist.append(i)
+        s = Stack(stacklist)
+        s.stack_op()
+        s.peek()
+        s.pop()
+        s.stack_len()
 
-s = Stack(stacklist)
-s.stack_op()
-s.peek()
-s.pop()
-s.stack_len()
+else:
+    parser.add_argument('--Queues',type=str)
+    args = parser.parse_args()
+    li_list1 = args.Queues.split(',')
+    queuelist = []
+    for i in li_list1:
+        queuelist.append(i)
+        q = Queue(queuelist)
+        q.enque()
+        q.deque()
+        q.queue_len()
