@@ -27,10 +27,12 @@ class Stack:
 
 class Queue:
     list1=[]
+    de =[]
 
     
     def __init__(self,s_list):
         self.list1 = s_list
+        self.de = collections.deque(self.list1)
 
     def enque(self):
         for i in range(len(self.list1)):
@@ -41,7 +43,7 @@ class Queue:
 
     def deque(self):
         for i in range(len(self.list1)):
-            print("The poped element is :",self.list1.popleft())
+            print("The poped element is :",self.de.popleft())
 
 
 parser = argparse.ArgumentParser()
